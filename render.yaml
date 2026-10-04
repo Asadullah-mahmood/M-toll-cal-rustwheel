@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: pk-toll-api
+    runtime: python
+    plan: free
+    region: singapore            # closest Render region to Pakistan
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: TOLL_UPDATE_HOURS
+        value: "6"
+      - key: TOLL_ADMIN_KEY
+        generateValue: true
+      - key: KEEP_ALIVE_URL       # set to https://<your-service>.onrender.com/health after first deploy
+        sync: false

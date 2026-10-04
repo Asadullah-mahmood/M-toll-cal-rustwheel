@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "currency": "PKR",
+    "last_reviewed": "2026-10-04",
+    "default_non_mtag_surcharge_pct": 50,
+    "rounding_step": 10,
+    "notice": "Rates follow NHA notifications (national highways, M-1, M-3, M-4, M-5, M-14, E-35 effective 10-Jul-2026; M-2 under the BOT concession effective 05-Jul-2026). Station chainages (km) are approximate. Verify against the official NHA tariff matrix before commercial use."
+  },
+  "vehicle_classes": {
+    "car":               {"label": "Car / Jeep / Taxi",                "aliases": ["jeep", "taxi", "suv", "pickup", "f1"]},
+    "wagon":             {"label": "Wagon (up to 12 seats)",           "aliases": ["van", "hiace", "f2"]},
+    "coaster":           {"label": "Coaster / Mini Bus (13-24 seats)", "aliases": ["minibus", "mini_bus", "f3"]},
+    "bus":               {"label": "Bus",                              "aliases": ["large_bus"]},
+    "truck":             {"label": "Truck (2 & 3 axle)",               "aliases": ["truck_2_3_axle", "2_axle_truck", "3_axle_truck", "mazda"]},
+    "articulated_truck": {"label": "Articulated Truck",                "aliases": ["trailer", "artic", "heavy_truck", "container"]}
+  },
+  "roads": {
+    "M-1": {
+      "name": "Islamabad - Peshawar Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 155, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 700, "wagon": 1100, "coaster": 1450, "bus": 2100, "truck": 2700, "articulated_truck": 3350},
+      "stations": [
+        {"name": "Peshawar", "km": 0},
+        {"name": "Charsadda", "km": 20},
+        {"name": "Nowshera", "km": 36},
+        {"name": "Swabi", "km": 74},
+        {"name": "Burhan", "km": 118},
+        {"name": "Islamabad", "km": 155, "aliases": ["Zero Point", "Islamabad Zero Point"]}
+      ]
+    },
+    "M-2": {
+      "name": "Lahore - Islamabad Motorway (BOT)", "type": "motorway", "pricing": "distance",
+      "total_km": 367, "effective_from": "2026-07-05", "valid_until": "2027-04-23", "verified_rates": true,
+      "rates": {"car": 1430, "wagon": 2390, "coaster": 3350, "bus": 4770, "truck": 6210, "articulated_truck": 7980},
+      "stations": [
+        {"name": "Lahore", "km": 0},
+        {"name": "Kala Shah Kaku", "km": 24},
+        {"name": "Sheikhupura", "km": 41},
+        {"name": "Pindi Bhattian", "km": 98},
+        {"name": "Sial Mor", "km": 142},
+        {"name": "Bhera", "km": 168},
+        {"name": "Kallar Kahar", "km": 210},
+        {"name": "Balkassar", "km": 240},
+        {"name": "Chakwal", "km": 260},
+        {"name": "Neela Dullah", "km": 310},
+        {"name": "Islamabad", "km": 367, "aliases": ["Thalian", "Islamabad Thalian"]}
+      ]
+    },
+    "M-3": {
+      "name": "Lahore - Abdul Hakeem Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 230, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 1000, "wagon": 1500, "coaster": 2200, "bus": 3150, "truck": 4050, "articulated_truck": 5000},
+      "stations": [
+        {"name": "Lahore", "km": 0, "aliases": ["Lahore Sundar"]},
+        {"name": "Abdul Hakeem", "km": 230}
+      ]
+    },
+    "M-4": {
+      "name": "Pindi Bhattian - Faisalabad - Multan Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 294, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 1350, "wagon": 1950, "coaster": 2900, "bus": 4050, "truck": 5300, "articulated_truck": 6500},
+      "stations": [
+        {"name": "Pindi Bhattian", "km": 0},
+        {"name": "Faisalabad", "km": 53},
+        {"name": "Gojra", "km": 110},
+        {"name": "Shorkot", "km": 185},
+        {"name": "Abdul Hakeem", "km": 225},
+        {"name": "Khanewal", "km": 255},
+        {"name": "Multan", "km": 294}
+      ]
+    },
+    "M-5": {
+      "name": "Multan - Sukkur Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 392, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 1500, "wagon": 2200, "coaster": 3250, "bus": 4600, "truck": 5950, "articulated_truck": 7250},
+      "stations": [
+        {"name": "Multan", "km": 0},
+        {"name": "Shujabad", "km": 30},
+        {"name": "Jalalpur Pirwala", "km": 61},
+        {"name": "Uch Sharif", "km": 89},
+        {"name": "Bahawalpur", "km": 114},
+        {"name": "Ahmedpur East", "km": 148},
+        {"name": "Liaquatpur", "km": 210},
+        {"name": "Khanpur", "km": 250},
+        {"name": "Rahim Yar Khan", "km": 290},
+        {"name": "Sadiqabad", "km": 312},
+        {"name": "Rohri", "km": 372},
+        {"name": "Sukkur", "km": 392}
+      ]
+    },
+    "M-9": {
+      "name": "Karachi - Hyderabad Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 136, "effective_from": "2025-06-15", "verified_rates": false,
+      "rate_note": "Derived from the Feb-2025 NHA notice (non-M-Tag rate divided by 1.25). M-9 was revised again in 2026; update with the latest NHA notification. Only car, wagon and coaster are available.",
+      "rates": {"car": 370, "wagon": 620, "coaster": 860},
+      "stations": [
+        {"name": "Karachi", "km": 0},
+        {"name": "Nooriabad", "km": 62},
+        {"name": "Jamshoro", "km": 120},
+        {"name": "Hyderabad", "km": 136}
+      ]
+    },
+    "M-14": {
+      "name": "D.I. Khan - Hakla Motorway", "type": "motorway", "pricing": "distance",
+      "total_km": 285, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 800, "wagon": 1450, "coaster": 1850, "bus": 2800, "truck": 3550, "articulated_truck": 4250},
+      "stations": [
+        {"name": "Hakla", "km": 0},
+        {"name": "D.I. Khan", "km": 285, "aliases": ["Dera Ismail Khan", "DI Khan"]}
+      ]
+    },
+    "E-35": {
+      "name": "Hassanabdal - Havelian - Mansehra Expressway (Hazara Motorway)", "type": "expressway", "pricing": "distance",
+      "total_km": 134, "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 400, "wagon": 550, "coaster": 750, "bus": 1150, "truck": 1450, "articulated_truck": 1750},
+      "stations": [
+        {"name": "Hassanabdal", "km": 0, "aliases": ["Hasan Abdal"]},
+        {"name": "Haripur", "km": 28},
+        {"name": "Havelian", "km": 59},
+        {"name": "Abbottabad", "km": 85},
+        {"name": "Mansehra", "km": 134}
+      ]
+    },
+    "NH": {
+      "name": "National Highways (per toll plaza)", "type": "national_highway", "pricing": "flat",
+      "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 100, "wagon": 200, "bus": 300, "truck": 400, "articulated_truck": 700},
+      "aliases": ["national highway", "national highways", "gt road"]
+    },
+    "N-55": {
+      "name": "Kohat Tunnel (N-55)", "type": "tunnel", "pricing": "flat",
+      "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 250, "wagon": 650, "bus": 750, "truck": 750, "articulated_truck": 1150},
+      "aliases": ["kohat tunnel"]
+    },
+    "E-75": {
+      "name": "Islamabad - Murree Dual Carriageway (IMDCW)", "type": "highway", "pricing": "flat",
+      "effective_from": "2026-07-10", "verified_rates": true,
+      "rates": {"car": 300, "wagon": 300, "bus": 450, "truck": 500, "articulated_truck": 1000},
+      "aliases": ["imdcw", "murree expressway"]
+    }
+  },
+  "fixed_fares": {
+    "_comment": "Optional exact station-to-station tolls that override distance proration. Format: \"M-2\": {\"Lahore|Sheikhupura\": {\"car\": 250, \"wagon\": 400}}"
+  }
+}
